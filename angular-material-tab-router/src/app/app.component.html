@@ -1,0 +1,63 @@
+
+<mat-toolbar color="primary">
+  <span>Angular Material App With Tab and Routing </span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>  
+</mat-toolbar>
+<!-- <input type="text" (change)="muda($event)"> -->
+<!-- 
+<mat-tab-group>
+  <mat-tab label="One" routerLink="first">
+ 
+  </mat-tab>
+  <mat-tab label="Two">
+    <h1>Some more tab content</h1>
+    <p>...</p>
+  </mat-tab> -->
+
+<!-- <mat-tab-group>
+  <mat-tab label="One"[routerLink]="link.link" >
+    <a >primeiro</a>
+  </mat-tab>
+</mat-tab-group> -->
+
+<!-- <nav mat-tab-nav-bar  >
+  <a mat-tab-link 
+  *ngFor="let link of navLinks"
+  [routerLink]="link.link"
+  routerLinkActive #rla="routerLinkActive"
+  [active]="rla.isActive"
+  (ngModelChange) = "muda($event)">
+ {{link.label}}
+</a>
+<p>{{teste}}</p>
+</nav>
+
+<router-outlet (activate)='muda($event)'></router-outlet> -->
+
+<div class="main-div">
+  <mat-card-content>
+  
+    <nav mat-tab-nav-bar class="teste">
+      <a mat-tab-link  [routerLink]="['first']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive #rla="routerLinkActive"
+      [active]="rla.isActive" (ngModelChange) = "muda($event)">Primeiro</a>
+    
+      <a mat-tab-link  [routerLink]="['second']" routerLinkActive #rl="routerLinkActive"
+      [active]="rl.isActive" (ngModelChange) = "muda($event)">Segundo</a>
+    
+    
+    <!-- <p>{{teste}}</p> -->
+    </nav>
+  
+  </mat-card-content>
+
+
+</div>
+<div class="main-div">
+  <mat-card-content>
+    <!-- <button (click)="troca()">Volta</button> -->
+    <router-outlet (activate)='muda($event)'></router-outlet>
+  </mat-card-content>
+</div>
+
+

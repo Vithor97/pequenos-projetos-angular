@@ -1,0 +1,14 @@
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mat-tab-nav-bar a.active {
+    background: blue;
+}
+
+.teste{
+    border: 1px solid red;
+}
