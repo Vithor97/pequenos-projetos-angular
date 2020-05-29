@@ -1,0 +1,19 @@
+<br>
+<div>
+<label>name:
+      <input #nomeValor placeholder="name"/>
+</label>
+<button (click)="addNome(nomeValor.value)">ADD nomes</button>
+<p *ngIf="nome">
+    Nome add foi {{nome}}
+</p>
+<br><br>
+
+<ul>
+<li *ngFor= "let nome of nomes">
+    {{nome}}
+</li>
+
+</ul>
+
+
