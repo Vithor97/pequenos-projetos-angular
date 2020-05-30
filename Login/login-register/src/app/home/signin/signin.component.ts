@@ -35,7 +35,6 @@ export class SignInComponent implements OnInit {
     login() {
         const userName = this.loginForm.get('userName').value;
         const password = this.loginForm.get('password').value;
-
         console.log('clicou no metodo login')
     }
 }
